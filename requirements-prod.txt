@@ -1,1 +1,12 @@
+# Production-specific dependencies
+-r requirements.txt
 
+# Remove development-only packages
+# (This file is for reference - use requirements.txt and filter)
+
+# Production optimizations
+gevent==23.9.1
+gunicorn==21.2.0
+redis==5.0.1
+sentry-sdk[flask]==1.35.0
+prometheus-flask-exporter==0.22.4
