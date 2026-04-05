@@ -1,1 +1,57 @@
+# Core Flask Framework
+Flask==2.3.3
+Flask-SQLAlchemy==3.1.1
+Flask-Migrate==4.0.5
+Flask-CORS==4.0.0
+Flask-Limiter==3.3.1
 
+# Database
+psycopg2-binary==2.9.9
+alembic==1.12.1
+SQLAlchemy==2.0.21
+
+# Authentication & Security
+PyJWT==2.8.0
+python-dotenv==1.0.0
+email-validator==2.0.0
+phonenumbers==8.13.18
+bleach==6.1.0
+python-magic==0.4.27
+
+# Document Parsing
+PyPDF2==3.0.1
+python-docx==1.1.0
+
+# NLP & Text Processing
+spacy==3.7.2
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.7.1/en_core_web_sm-3.7.1-py3-none-any.whl
+
+# Optional OCR Support (install if needed)
+pdf2image==1.16.3
+pytesseract==0.3.10
+Pillow==10.0.1
+
+# Caching & Performance
+redis==5.0.1
+cachetools==5.3.1
+tenacity==8.2.3
+
+# Monitoring & Metrics
+prometheus-flask-exporter==0.22.4
+sentry-sdk[flask]==1.35.0
+
+# Development & Testing
+pytest==7.4.3
+pytest-cov==4.1.0
+faker==20.1.0
+black==23.10.1
+flake8==6.1.0
+mypy==1.6.1
+
+# Production Server
+gunicorn==21.2.0
+gevent==23.9.1
+
+# Utilities
+python-dateutil==2.8.2
+requests==2.31.0
