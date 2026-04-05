@@ -1,1 +1,24 @@
+# Development-specific dependencies
+-r requirements.txt
 
+# Testing
+pytest==7.4.3
+pytest-flask==1.2.0
+pytest-cov==4.1.0
+factory-boy==3.2.1
+faker==20.1.0
+
+# Code Quality
+black==23.10.1
+flake8==6.1.0
+mypy==1.6.1
+isort==5.12.0
+pre-commit==3.5.0
+
+# Debugging
+ipython==8.16.1
+flask-debugtoolbar==0.13.1
+
+# Profiling
+flask-profiler==1.8
+memory-profiler==0.61.0
