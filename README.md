@@ -9,19 +9,28 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-22c55e?style=for-the-badge)](LICENSE)
 [![Code Style: Black](https://img.shields.io/badge/Code%20Style-Black-000000?style=for-the-badge)](https://github.com/psf/black)
 
+<div>
+
+  <!-- Repository Analytics -->
+![GitHub repo size](https://img.shields.io/github/repo-size/stephenombuya/Automated-Resume-Parser)
+![GitHub language count](https://img.shields.io/github/languages/count/stephenombuya/Automated-Resume-Parser)
+![GitHub top language](https://img.shields.io/github/languages/top/stephenombuya/Automated-Resume-Parser)
+![GitHub last commit](https://img.shields.io/github/last-commit/stephenombuya/Automated-Resume-Parser)
+![GitHub contributors](https://img.shields.io/github/contributors/stephenombuya/Automated-Resume-Parser)
+
+</div>
+
 **A production-grade REST API for extracting structured candidate data from PDF and DOCX resumes using NLP and machine learning.**
 
 [Quick Start](#-quick-start) · [API Docs](#-api-documentation) · [Architecture](#-architecture) · [Deployment](#-deployment) · [Contributing](#-contributing)
 
 </div>
 
----
 
 ## Overview
 
 Resume Parser API ingests resume files in multiple formats and returns clean, structured JSON — names, emails, phone numbers, skills, experience levels, and confidence scores. It's built for scale: async processing, Redis caching, horizontal scaling, and full observability out of the box.
 
----
 
 ## Features
 
@@ -46,7 +55,6 @@ Resume Parser API ingests resume files in multiple formats and returns clean, st
 - **Soft deletes** — 30-day data recovery window
 - **Health probes** — liveness and readiness endpoints for Kubernetes
 
----
 
 ## Table of Contents
 
@@ -65,7 +73,7 @@ Resume Parser API ingests resume files in multiple formats and returns clean, st
 
 ---
 
-## ⚡ Quick Start
+##  Quick Start
 
 ### Docker (Recommended)
 
@@ -118,7 +126,7 @@ curl "http://localhost:5000/api/v1/resumes?page=1&per_page=20&status=completed&s
 
 ---
 
-## 🏗 Architecture
+##  Architecture
 
 ### System Overview
 
@@ -170,7 +178,7 @@ Upload → Validation → Text Extraction → NLP Processing → Storage → Res
 
 ---
 
-## 📦 Installation
+##  Installation
 
 ### System Requirements
 
@@ -299,7 +307,7 @@ python run.py --seed     # Optional: seed with test data
 
 ---
 
-## 📚 API Documentation
+##  API Documentation
 
 ### Authentication
 
@@ -470,7 +478,7 @@ Content-Type: application/json
 
 ---
 
-## 🗄 Database Schema
+##  Database Schema
 
 ### `resumes` Table
 
@@ -506,7 +514,7 @@ CREATE INDEX idx_resume_search_vector   ON resumes USING gin(search_vector);
 
 ---
 
-## 💻 Development
+##  Development
 
 ### Project Structure
 
@@ -578,9 +586,8 @@ def test_parse_resume(client):
     assert "skills" in response.json
 ```
 
----
 
-## 🚢 Deployment
+##  Deployment
 
 ### Docker (Recommended)
 
@@ -712,9 +719,8 @@ spec:
 - [ ] Health check endpoints verified
 - [ ] Sentry DSN configured for error tracking
 
----
 
-## 📊 Monitoring
+##  Monitoring
 
 ### Health Endpoints
 
@@ -780,7 +786,7 @@ awk '$NF > 1000' logs/access.log       # Requests slower than 1s
 
 ---
 
-## 🔒 Security
+##  Security
 
 ### Security Headers
 
@@ -819,9 +825,8 @@ Referrer-Policy: strict-origin-when-cross-origin
 - [ ] CSRF protection enabled for any form-based routes
 - [ ] Regular dependency updates (`pip-audit`, Dependabot)
 
----
 
-## 🔧 Troubleshooting
+##  Troubleshooting
 
 ### Database Connection Errors
 
@@ -874,9 +879,8 @@ export LOG_LEVEL=DEBUG
 python run.py --debug
 ```
 
----
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Please follow this workflow:
 
@@ -900,7 +904,7 @@ Contributions are welcome! Please follow this workflow:
 
 ---
 
-## 🗺 Roadmap
+##  Roadmap
 
 - [ ] Bulk upload endpoint (ZIP of resumes)
 - [ ] Web UI for file uploads and result browsing
@@ -912,6 +916,6 @@ Contributions are welcome! Please follow this workflow:
 
 ---
 
-## 📄 License
+##  License
 
 This project is licensed under the [MIT License](LICENSE).
